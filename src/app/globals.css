@@ -1,0 +1,206 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --gradient-color-1: #030a26;
+  --gradient-color-2: #030513;
+  --gradient-color-3: rgba(1, 227, 226, 1);
+  --gradient-color-4: rgba(1, 17, 221, 1);
+  --gradient-color-5: rgba(227, 3, 247, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.bg-main-gradient {
+  background-image: linear-gradient(to right, #030a26, #030513 40%, transparent),
+    radial-gradient(ellipse at 0% 50%, #030a26 20%, #030513 30%, transparent),
+    radial-gradient(
+      90% 80% at 90% 0%,
+      rgba(1, 227, 226, 1) 20%,
+      rgba(1, 17, 221, 1) 50%,
+      transparent
+    ),
+    radial-gradient(
+      90% 80% at 90% 90%,
+      rgba(227, 3, 247, 1) 40%,
+      rgba(1, 17, 221, 1) 60%,
+      transparent
+    );
+}
+
+.bg-main-gradient-light {
+  background-image: linear-gradient(to right, #ffffff, #ffffff 40%, transparent),
+    radial-gradient(ellipse at 0% 50%, #ffffff 20%, #ffffff 30%, transparent),
+    radial-gradient(
+      90% 80% at 90% 0%,
+      rgba(1, 227, 226, 1) 20%,
+      rgba(1, 17, 221, 1) 50%,
+      transparent
+    ),
+    radial-gradient(
+      90% 80% at 90% 90%,
+      rgba(227, 3, 247, 1) 40%,
+      rgba(1, 17, 221, 1) 60%,
+      transparent
+    );
+}
+
+.bg-main-black {
+  background: #000000;
+}
+
+.underline-links a {
+  text-decoration: underline;
+}
+
+/* style added dynamically to highlight active link in terms and conditions page */
+
+.active-link h5,
+.active-link span {
+  animation: changeColorScale 400ms ease-in-out forwards;
+}
+
+.active-link > #separator {
+  animation: changeColor 400ms ease-in-out forwards;
+}
+
+@keyframes changeColor {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes changeColorScale {
+  0% {
+    opacity: 0.6;
+  }
+  80% {
+    scale: 1.07;
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+/* Customizing scrollbars for div,section,ul,form */
+
+body,
+div,
+section,
+ul,
+ol,
+form {
+  scrollbar-color: #006dcd rgba(0, 108, 203, 0.3);
+  scrollbar-width: auto;
+}
+
+body::-moz-scrollbar-track,
+div::-moz-scrollbar-track,
+section::-moz-scrollbar-track,
+ul::-moz-scrollbar-track,
+ol::-moz-scrollbar-track,
+form::-moz-scrollbar-track {
+  border-radius: 100px !important;
+}
+
+body::-webkit-scrollbar,
+div::-webkit-scrollbar,
+section::-webkit-scrollbar,
+ul::-webkit-scrollbar,
+ol::-webkit-scrollbar,
+form::-webkit-scrollbar {
+  width: 8px;
+  height: 0px;
+}
+
+body::-webkit-scrollbar-thumb,
+div::-webkit-scrollbar-thumb,
+section::-webkit-scrollbar-thumb,
+ul::-webkit-scrollbar-thumb,
+ol::-webkit-scrollbar-thumb,
+form::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background-color: #006dcd;
+}
+
+body::-webkit-scrollbar-track,
+div::-webkit-scrollbar-track,
+section::-webkit-scrollbar-track,
+ul::-webkit-scrollbar-track,
+ol::-webkit-scrollbar-track,
+form::-webkit-scrollbar-track {
+  background-color: rgba(0, 108, 203, 0.3);
+  border-radius: 100px;
+}
+
+.grayscale {
+  filter: grayscale(1);
+}
+
+/* Mapbox popup styles */
+
+.mapboxgl-popup {
+  max-width: 300px !important;
+}
+
+.mapboxgl-popup-content {
+  background-color: #030a26 !important;
+  color: #ffff;
+}
+
+.map-popup {
+  margin: 4px;
+}
+
+.map-popup h2 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.map-popup > a {
+  text-decoration: underline;
+}
+
+.map-popup-image {
+  border-radius: 20rem;
+  height: 30px;
+  width: 30px;
+  object-fit: contain;
+}
+
+.mapboxgl-popup-tip {
+  border-top-color: #030a26 !important;
+}
+
+.mapboxgl-popup-close-button {
+  margin: 5px;
+  font-size: medium;
+}

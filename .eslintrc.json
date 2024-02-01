@@ -1,0 +1,36 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "airbnb",
+    "airbnb-typescript",
+    "eslint:recommended",
+    "eslint-config-prettier"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "overrides": [
+    {
+      "files": ["**/*.tsx", "**/*.ts"],
+      "rules": {
+        "jsx-a11y/media-has-caption": "off",
+        "react/require-default-props": "off",
+        "react/function-component-definition": "off",
+        "import/no-extraneous-dependencies": "off",
+        "react/jsx-props-no-spreading": "off",
+        "no-useless-catch": "off",
+        "import/prefer-default-export": "off",
+        "no-unused-vars": "off",
+        "no-console": "warn",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "react/no-unescaped-entities": "off",
+        "react/display-name": "off",
+        "@typescript-eslint/quotes": "off",
+        "import/extensions": "off",
+        "react/no-array-index-key": "off",
+        "no-nested-ternary": "off",
+        "no-underscore-dangle": "off"
+      }
+    }
+  ]
+}

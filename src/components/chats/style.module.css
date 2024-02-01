@@ -1,0 +1,108 @@
+.chat-message {
+  display: flex;
+  flex-direction: column;
+  width: full;
+  position: relative;
+}
+
+.chat-date,
+.horizontal-divider {
+  align-self: center;
+  color: #747d86;
+  position: relative;
+}
+
+.chat-date::before,
+.chat-date::after,
+.horizontal-divider::before,
+.horizontal-divider::after {
+  content: "";
+  height: 1px;
+  width: 30px;
+  position: absolute;
+  background: #747d86;
+  top: 50%;
+}
+
+.chat-date::before,
+.horizontal-divider::before {
+  left: -35px;
+}
+
+.chat-date::after,
+.horizontal-divider::after {
+  right: -35px;
+}
+
+.received-message,
+.sent-message {
+  max-width: 85%;
+  position: relative;
+}
+
+.received-message {
+  align-self: flex-start;
+  border-radius: 0px 6px 6px 6px;
+  background: #0e1d33;
+}
+
+.received-message::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: -9px;
+  top: 0;
+  height: 0px;
+  width: 0px;
+  border-bottom: 7px solid transparent;
+  border-right: 10px solid #0e1d33;
+}
+
+.sent-message {
+  align-self: flex-end;
+  border-radius: 5px 0 5px 5px;
+  background: #006dcd;
+}
+
+.sent-message::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  right: -9px;
+  top: 0;
+  height: 0px;
+  width: 0px;
+  border-bottom: 7px solid transparent;
+  border-left: 10px solid #006dcd;
+}
+
+@media screen and (min-width: 768px) {
+  .received-message,
+  .sent-message {
+    max-width: 70%;
+    position: relative;
+  }
+  .received-message::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: -14px;
+    top: 0;
+    height: 0px;
+    width: 0px;
+    border-bottom: 7px solid transparent;
+    border-right: 15px solid #0e1d33;
+  }
+
+  .sent-message::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: -14px;
+    top: 0;
+    height: 0px;
+    width: 0px;
+    border-bottom: 7px solid transparent;
+    border-left: 15px solid #006dcd;
+  }
+}

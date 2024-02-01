@@ -1,0 +1,12 @@
+.bg-gradient-percent {
+  background: linear-gradient(
+    90deg,
+    rgb(64, 224, 208) 20%,
+    rgb(91, 129, 231) 80%,
+    rgba(230, 0, 255, 0.8) 120%
+  );
+}
+
+.profile-item-border {
+  box-shadow: 2px 2px 15px 0px #00ebfa4d, 0px 4px 4px 0px #00000040;
+}

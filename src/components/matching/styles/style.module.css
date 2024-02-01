@@ -1,0 +1,10 @@
+.join-call-button {
+  background: linear-gradient(90deg, #027b65, #030c79, #640683);
+}
+
+.schedule-call-button {
+  background: linear-gradient(#0e1d33, #0e1d33) padding-box,
+    linear-gradient(90deg, #027b65, #030c79, #640683) border-box;
+  border-radius: 50em;
+  border: 4px solid transparent;
+}
